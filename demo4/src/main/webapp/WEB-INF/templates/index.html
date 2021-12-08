@@ -22,6 +22,33 @@
 <a th:href="@{/testResponse}">通过ServletAPI的Response对象响应浏览器数据</a><br>
 <a th:href="@{/testResponseBody}">测试@ReponseBody响应浏览器数据</a><br>
 <a th:href="@{/testResponseUser}">测试@ReponseBody响应浏览器User数据</a><br>
+<div id="app">
+    <a @click="testAxios" th:href="@{/testAxios}">springMVC处理ajax</a>
+</div>
+<script type="text/javascript" th:src="@{/static/js/vue.js}"></script>
+<script type="text/javascript" th:src="@{/static/js/axios.min.js}"></script>
+<script type="text/javascript">
+    new Vue({
+        el: "#app",
+        methods: {
+            testAxios: function (event) {
+                axios({
+                    method: "post",
+                    url: event.target.href,
+                    params: {
+                        username: "admin",
+                        password: "123456"
+                    }
+                }).then(function (response) {
+                    alert(response.data);
+                });
+                event.preventDefault();
+            }
+        }
+    });
+
+</script>
+
 
 </body>
 </html>

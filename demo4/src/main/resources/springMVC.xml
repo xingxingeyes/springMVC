@@ -34,11 +34,15 @@
 
     <!-- 配置视图控制器 -->
     <mvc:view-controller path="/" view-name="index"></mvc:view-controller>
+    <mvc:view-controller path="/file" view-name="file"></mvc:view-controller>
     <!-- 开放对静态资源的访问  表示请求先由DispatcherServlet处理，如果找不到资源就用默认的 default-servlet处理-->
     <mvc:default-servlet-handler/>
 
     <!-- 开启mvc注解驱动 -->
     <mvc:annotation-driven/>
+
+    <!--配置文件上传解析器，将上传的文件封装为MultipartFile-->
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"></bean>
 
 
 </beans>

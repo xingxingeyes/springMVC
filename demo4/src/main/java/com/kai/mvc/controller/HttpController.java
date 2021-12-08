@@ -71,4 +71,12 @@ public class HttpController {
         return new User(1001,"admin","123",19,"nan");
     }
 
+
+    @RequestMapping("/testAxios")
+    @ResponseBody
+    public String testAxios(String username, String password) {
+        System.out.println("username:" + username + "password:" + password);
+        return "hello,axios";
+    }
+
 }
