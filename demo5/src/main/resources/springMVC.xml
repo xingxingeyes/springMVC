@@ -74,4 +74,16 @@
         <!--        </mvc:interceptor>-->
     </mvc:interceptors>
 
+    <!--配置异常处理-->
+<!--    <bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">-->
+<!--        <property name="exceptionMappings">-->
+<!--            <props>-->
+<!--                &lt;!&ndash;  出现ArithmeticException 异常时 跳转到 error 页面 &ndash;&gt;-->
+<!--                <prop key="java.lang.ArithmeticException">error</prop>-->
+<!--            </props>-->
+<!--        </property>-->
+<!--        &lt;!&ndash; 默认存储到request域中  value="ex" 为request域中的键，异常为值 &ndash;&gt;-->
+<!--        <property name="exceptionAttribute" value="ex"></property>-->
+<!--    </bean>-->
+
 </beans>
