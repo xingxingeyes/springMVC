@@ -34,7 +34,7 @@
     </filter-mapping>
 
 
-    <!-- 配置HiddenHttpMethodFilter -->
+    <!-- 配置配置处理请求方式put和delete的HiddenHttpMethodFilter -->
     <filter>
         <filter-name>HiddenHttpMethodFilter</filter-name>
         <filter-class>org.springframework.web.filter.HiddenHttpMethodFilter</filter-class>
